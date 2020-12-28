@@ -33,7 +33,7 @@ npx truffle exec --network development ./scripts/index.js
 npm install --save-dev ganache-cli
 ```
 
-### Run your node 
+### Run your node or instead run ganache UI
 
 ```shell
 npx ganache-cli --deterministic

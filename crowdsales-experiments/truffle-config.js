@@ -78,7 +78,7 @@ module.exports = {
           provider: () => new HDWalletProvider(
               mnemonic, `https://eth-rinkeby.alchemyapi.io/v2/${alchemyApiKey}`
           ),
-          network_id: 4,
+          network_id: 5,
           gasPrice: 10e9,
           skipDryRun: true
       }
