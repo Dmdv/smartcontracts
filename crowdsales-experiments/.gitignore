@@ -1,0 +1,7 @@
+.idea/
+node_modules/@openzeppelin/contracts/access/README.adoc
+node_modules/@openzeppelin/contracts/build/contracts/ERC20Burnable.json
+node_modules/
+build/
+/
+secrets.json
