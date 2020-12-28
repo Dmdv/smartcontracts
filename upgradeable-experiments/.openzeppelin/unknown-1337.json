@@ -1,0 +1,28 @@
+{
+  "manifestVersion": "3.1",
+  "impls": {
+    "a65cdfa308566facef6065beb9e631bc7782c0699e2093fd7f5bc24c50583bce": {
+      "address": "0x345cA3e014Aaf5dcA488057592ee47305D9B3e10",
+      "txHash": "0x82466b0c1e676fa05a981378aab466e461bc0e52956ee75c8c3a8455f214b028",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Box",
+            "label": "value",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\D\\smartcontracts\\upgradeable-experiments\\contracts\\Box.sol:6"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          }
+        }
+      }
+    }
+  },
+  "admin": {
+    "address": "0xf25186B5081Ff5cE73482AD761DB0eB0d25abfBF",
+    "txHash": "0x9de3ec0d9d265d03b63ed6f8d1d0cb0fe06634b06c6a1fdf809006e0d3d46119"
+  }
+}
