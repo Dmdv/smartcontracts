@@ -39,22 +39,25 @@ module.exports = async function (deployer) {
 };
 ```
 
-Add wallet
+Add Wallet
 ```shell
 npm install @truffle/hdwallet-provider
 ```
-
 [Connect to public network](https://docs.openzeppelin.com/learn/connecting-to-public-test-networks)
 
 Get console for the specific network
 ```shell
 npx truffle console --network rinkeby
 ```
-Get All accounts
+Migrate
+```shell
+truffle migrate --network rinkeby
+```
+Get All Accounts
 ```shell
 accounts
 ```
-Get first address
+Get First Address
 ```shell
 await web3.eth.getBalance(accounts[0])
 ```
