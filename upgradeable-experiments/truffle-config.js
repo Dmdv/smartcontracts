@@ -82,7 +82,10 @@ module.exports = {
           `https://rinkeby.infura.io/v3/${infuraApiKey}`
       ),
       network_id: 4,
-      gasPrice: 10e9,
+      gas: 5500000,
+      // gasPrice: 10e9,
+      confirmations: 2,
+      timeoutBlocks: 200,
       skipDryRun: true
     },
   },
