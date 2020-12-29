@@ -53,6 +53,12 @@ Migrate
 ```shell
 truffle migrate --network rinkeby
 ```
+
+Migrate 2 deployment only
+```shell
+truffle migrate -f 2 --network rinkeby
+```
+
 Get All Accounts
 ```shell
 accounts
@@ -74,6 +80,35 @@ How to execute script in a network
 npx truffle exec --network development ./scripts/index.js
 ```
 
+### Create local testing enironment
+
+```shell
+npm install --save-dev ganache-cli
+```
+
+### Run your node or instead run ganache UI
+
+```shell
+npx ganache-cli --deterministic
+```
+
+### Run migration in the created network
+
+```shell
+npx truffle migrate --network development
+```
+
+### Intetraction with deployed Box
+```shell
+$ npx truffle console --network rinkeby
+truffle(rinkeby)> box = await Box.deployed()
+truffle(rinkeby)> box.address
+'0xF325bB49f91445F97241Ec5C286f90215a7E3BC6'
+truffle(rinkeby)> (await box.retrieve()).toString()
+'42'
+```
+
+## Create a new version of our implementation
 
 ## References
 
