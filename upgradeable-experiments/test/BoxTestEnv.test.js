@@ -9,7 +9,11 @@
 // It also exports a list of accounts that have been pre-funded with Ether
 // and convenient ways to load your contracts from their compiled artifacts,
 // among other utilities.
+
 // https://docs.openzeppelin.com/learn/writing-automated-tests#setting-up-a-testing-environment
+
+// Test environment API:
+// https://docs.openzeppelin.com/test-environment/0.1/api
 
 const { accounts, contract } = require('@openzeppelin/test-environment');
 const { expect } = require('chai');
