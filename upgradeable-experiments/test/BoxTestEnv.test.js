@@ -1,4 +1,7 @@
 // Load dependencies
+
+// npm install --save-dev @openzeppelin/test-environment
+
 // Run with npm test: "mocha --exit --recursive"
 
 // Once you require the library from your JavaScript code,
