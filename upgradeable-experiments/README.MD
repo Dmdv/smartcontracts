@@ -108,7 +108,62 @@ truffle(rinkeby)> (await box.retrieve()).toString()
 '42'
 ```
 
+## Transfer control of upgrades to a Gnosis Safe  
+https://help.gnosis-safe.io/en/articles/3876461-create-a-safe-multisig
+
+3_transfer_ownership.js
+
+```javascript
+// migrations/3_transfer_ownership.js
+const { admin } = require('@openzeppelin/truffle-upgrades');
+ 
+module.exports = async function (deployer, network) {
+  // Use address of your Gnosis Safe
+  const gnosisSafe = '0x1c14600daeca8852BA559CC8EdB1C383B8825906';
+ 
+  // Don't change ProxyAdmin ownership for our test network
+  if (network !== 'test') {
+    // The owner of the ProxyAdmin can upgrade our contracts
+    await admin.transferProxyAdminOwnership(gnosisSafe);
+  }
+};
+```
+
+```shell
+npx truffle migrate --network rinkeby
+```
+
 ## Create a new version of our implementation
+
+BoxV2.sol  
+BoxV2.test.js  
+BoxV2.proxy.test.js
+
+```shell
+npx truffle test
+npx truffle migrate --network rinkeby
+```
+Interacting with deployed version
+
+```shell
+$ npx truffle console --network rinkeby
+truffle(rinkeby)> box = await Box.deployed()
+truffle(rinkeby)> box.address
+'0xF325bB49f91445F97241Ec5C286f90215a7E3BC6'
+truffle(rinkeby)> (await box.retrieve()).toString()
+'42'
+```
+
+## Deploy the new implementation
+
+4_prepare_upgrade_boxv2.js
+
+`We can run the migration on the Rinkeby network to deploy the new implementation. Note: We need to skip dry run when running this migration.`
+
+```shell
+npx truffle migrate --network rinkeby
+```
+
 
 ## References
 
